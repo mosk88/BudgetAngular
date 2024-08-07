@@ -1,0 +1,11 @@
+.table-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-operation-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}

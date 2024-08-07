@@ -1,0 +1,31 @@
+/* Ensure the footer is pushed to the bottom of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer styling */
+footer {
+  background-color: #f8f9fa; /* Light background color */
+  color: #212529; /* Dark text color for contrast */
+  text-align: center;
+  padding: 1rem 0; /* Padding for top and bottom */
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.container {
+  max-width: 100%; /* Ensure the container spans full width */
+}
+
+.mb-0 {
+  margin-bottom: 0; /* Remove bottom margin for paragraph */
+}

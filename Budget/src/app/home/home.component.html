@@ -1,0 +1,20 @@
+<!-- src/app/home/home.component.html -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="text-center">Login</h1>
+      <form (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input id="username" [(ngModel)]="username" name="username" type="text" class="form-control" required />
+        </div>
+        <div class="form-group mt-3">
+          <label for="password">Password:</label>
+          <input id="password" [(ngModel)]="password" name="password" type="password" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
+

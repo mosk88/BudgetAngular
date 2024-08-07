@@ -1,0 +1,35 @@
+
+<div class="container mt-4">
+  <h2>Gestion des comptes</h2>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <input type="text" [(ngModel)]="newAccount.name" class="form-control" placeholder="Nom du compte">
+    </div>
+    <div class="col-md-6">
+      <input type="number" [(ngModel)]="newAccount.balance" class="form-control" placeholder="Solde">
+    </div>
+  </div>
+  
+  <button class="btn btn-primary mb-3" (click)="addAccount()">Ajouter Compte</button>
+
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Solde</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts; let i = index">
+        <td>{{ account.name }}</td>
+        <td>{{ account.balance | currency }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteAccount(i)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

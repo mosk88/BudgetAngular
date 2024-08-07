@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <h2>Indicateurs</h2>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input type="text" [(ngModel)]="newIndicator.name" class="form-control" placeholder="Nom de l'indicateur">
+    </div>
+    <div class="col-md-4">
+      <input type="number" [(ngModel)]="newIndicator.value" class="form-control" placeholder="Valeur">
+    </div>
+    <div class="col-md-4">
+      <input type="text" [(ngModel)]="newIndicator.status" class="form-control" placeholder="Statut">
+    </div>
+  </div>
+
+  <button class="btn btn-primary mb-3" (click)="addIndicator()">Ajouter Indicateur</button>
+
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Valeur</th>
+        <th scope="col">Statut</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let indicator of indicators; let i = index">
+        <td>{{ indicator.name }}</td>
+        <td>{{ indicator.value }}</td>
+        <td>{{ indicator.status }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteIndicator(i)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ <div >
+  <canvas baseChart
+          [data]="data"
+          [options]="options"
+          [type]="'bar'">
+  </canvas>
+</div>
+</div>
+
